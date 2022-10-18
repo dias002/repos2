@@ -33,7 +33,7 @@ p{
     content: attr(data-tooltip); /* Выводим текст */
     position: absolute; 
     width: 400px;
-    left: 0; top: 0; /* Положение подсказки */ /* Синий цвет фона */
+    left: 200px; top: 0; /* Положение подсказки */ /* Синий цвет фона */
     color: #333333;
     padding: 15px 20px 15px 20px;
     background: #FFFFFF;
