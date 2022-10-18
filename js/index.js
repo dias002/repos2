@@ -27,3 +27,34 @@ tabBtn.forEach(function(item) {
         } 
     });
 });
+ 
+const accordion = document.querySelectorAll('.accordion_btn_mobile')
+const accosdionContent = document.querySelectorAll('.panel')
+accordion.forEach(function(item){
+    item.addEventListener('click', function(){
+        // find all elements in contentBoxes
+        accosdionContent.forEach(function(item){
+            item.classList.add('hidden')
+         })
+       const tabContent = document.querySelector('#' + this.dataset.accordion) 
+       tabContent.classList.remove('hidden')
+    })
+})
+accordion.forEach(function(item) {
+    item.addEventListener('click', function() {
+        // переменной присваиваем текущую кнопку
+        let currentBtn = item;
+        // если кнопка не содержит класс tabsActive, то добавляем класс
+        if (!currentBtn.classList.contains('active_acc')) {
+            // убираем класс актив с кнопки
+            accordion.forEach(function(item) {
+                item.classList.remove('active_acc');
+            });
+
+            // вешаем новый класс на кнопку
+            currentBtn.classList.add('active_acc');
+        } 
+    });
+});
+
+
