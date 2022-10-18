@@ -25,7 +25,32 @@ p{
     font-family: 'golos-600';
     margin: 0;
 }
-
+/* всплывающееся окно */
+[data-tooltip] {
+    position: relative; /* Относительное позиционирование */ 
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; 
+    width: 400px;
+    left: 0; top: 0; /* Положение подсказки */ /* Синий цвет фона */
+    color: #333333;
+    padding: 15px 20px 15px 20px;
+    background: #FFFFFF;
+    border: 1px solid #93CBA2;
+    box-shadow: 0px 4px 4px rgba(147, 203, 162, 0.18);
+    border-radius: 10px; /* Параметры тени */
+    pointer-events: none; 
+    opacity: 0; 
+    transition: .5s; 
+   } 
+   [data-tooltip]:hover::after {
+    opacity: 1; 
+    top: 20px; 
+   }
+p{
+    cursor:pointer;
+}
 /* подключение шрифтов */
 @font-face {
     font-family: 'golos-400';
@@ -163,11 +188,31 @@ p{
     background-color: #249842;
     color: #FFFFFF;
 }
-.tab_btns{
-    
-}
-.content_text > a{
+
+.content_text > a {
     color: #249842;
+}
+.content_link{
+    background: #EFF5F0;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+.content_link > a{
+    color: #249842;
+}
+.content_link p a{
+    color: #249842;
+}
+.content_text p{
+    text-decoration: underline 1px dashed #333333;
+}
+.content_text button{
+    border: none;
+    background-color: transparent;
+    color: #249842;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
 }
 .hidden{
     display: none;
@@ -242,7 +287,13 @@ p{
         height: auto;
     }
     .card{
-        height: 400px;
+        height: 300px;
+        width: 100%;
+    }
+    .cards_box{
+        display: grid!important;
+        grid-template-columns: repeat(2, 49%);
+        row-gap: 10px;
     }
     .helper_block{
         width: 45%!important;
@@ -289,15 +340,12 @@ p{
     .accordion_mobile{
         display: block;
     }
-    .cards_box{
-        display: grid!important;
-        grid-template-columns: repeat(2, 49%);
-        row-gap: 10px;
-    }
+    
     .card{
         width: 100%;
         justify-content: space-around!important;
         font-size: 12px;
+        height: 194px;
     }
     .card_title{
         margin-top: 0;
@@ -351,6 +399,9 @@ p{
         padding-bottom: 10px;
         width: 90%;
     }
+    .sct3_acts{
+        padding: 0!important;
+    }
  }
 @media (max-width: 320px) { 
     .cards_box{
@@ -361,7 +412,7 @@ p{
     .card{
         width: 100%!important;
         justify-content: space-around!important;
-        height: 315px;
+        height: 258px;
     }
     .card_icon{
         margin-top: 0!important;
