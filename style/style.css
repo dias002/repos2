@@ -1,6 +1,7 @@
 body{
     width: 100%;
     background: #F5F5F5;
+    overflow-x: hidden;
 }
 *{
     margin: 0;
@@ -264,7 +265,9 @@ p{
     }
     .block_title_btns button{
         margin-top: 5px!important;
+        width: 200px;
     }
+
     .helper_img{
         width: 30%;
         height: auto;
@@ -275,6 +278,7 @@ p{
         
     }
 }
+
 @media (max-width: 768px) { 
     .accordion_title{
         text-align: center;
@@ -300,8 +304,8 @@ p{
     }
     .card_icon{
         margin-top: 0!important;
-        
     }
+    
     .helper_block{
         width: 100%;
         margin: 10px auto;
@@ -323,6 +327,10 @@ p{
     
     .card{
         height: 300px;
+    }
+    .block_title_btns button{
+        margin-top: 5px!important;
+        width: 120px;
     }
  }
  @media (max-width:425px){
@@ -366,4 +374,5 @@ p{
         height: 30px;
     }
     
+
 }
