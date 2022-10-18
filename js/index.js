@@ -57,4 +57,3 @@ accordion.forEach(function(item) {
     });
 });
 
-
