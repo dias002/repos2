@@ -392,7 +392,7 @@ p{
     }
 
  }
- @media (max-width: 375px){
+@media (max-width: 375px){
     .block_title_btns{
         width: 100%!important;
     }
@@ -406,6 +406,10 @@ p{
     }
     .sct3_acts{
         padding: 0!important;
+    }
+    .circle{
+        width: 204px;
+        height: 204px;
     }
  }
 @media (max-width: 320px) { 
