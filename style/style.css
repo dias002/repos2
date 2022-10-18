@@ -340,7 +340,12 @@ p{
     .accordion_mobile{
         display: block;
     }
-    
+    [data-tooltip] {
+        display: none;
+    }
+    [data-tooltip]::after {
+        display: none;
+    }
     .card{
         width: 100%;
         justify-content: space-around!important;
