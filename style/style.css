@@ -26,7 +26,7 @@ p{
     margin: 0;
 }
 /* всплывающееся окно */
-[data-tooltip] {
+   [data-tooltip] {
     position: relative; /* Относительное позиционирование */ 
    }
    [data-tooltip]::after {
@@ -328,6 +328,9 @@ p{
         display: grid;
         
     }
+    .acts img{
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 768px) { 
@@ -385,27 +388,32 @@ p{
         margin-top: 5px!important;
         width: 120px;
     }
+    .block_title_btns button{
+        width: 138px;
+    }
  }
  @media (max-width:425px){
     .sct2_accordion_box{
         padding: 10px!important;
     }
+    
 
  }
-@media (max-width: 375px){
+ @media (max-width: 375px){
     .block_title_btns{
         width: 100%!important;
     }
 
-    .block_title_btns button{
-        color: white;
-    }
+    
     .helper_block_box{
         padding-bottom: 10px;
         width: 90%;
     }
     .sct3_acts{
         padding: 0!important;
+    }
+    .acts img{
+        margin-top: 15px;
     }
     .circle{
         width: 204px;
@@ -432,6 +440,7 @@ p{
     }
     .block_title_btns button {
         height: 30px;
+       
     }
     
 
